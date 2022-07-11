@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+
+<addon id="plugin.video.pov" version="2.15.0" name="POV" provider-name="kodifitzwell">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="resources/lib/pov.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="resources/lib/service.py" />
+    <extension point="xbmc.python.module" library="resources/lib/" />
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="resources/contextmenu/refresh_widgets.py">
+                <label>40001</label>
+                <visible>String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/contextmenu/mark_watched.py">
+                <label>40003</label>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(pov_widget),true) + String.IsEqual(ListItem.Property(pov_playcount),0)</visible>
+            </item>
+            <item library="resources/contextmenu/mark_unwatched.py">
+                <label>40004</label>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(pov_widget),true) + String.IsEqual(ListItem.Property(pov_playcount),1)</visible>
+            </item>
+            <item library="resources/contextmenu/clear_progress.py">
+                <label>40009</label>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(pov_widget),true) + String.IsEqual(ListItem.Property(pov_in_progress),true)</visible>
+            </item>
+            <item library="resources/contextmenu/browse.py">
+                <label>40002</label>
+                <visible>String.IsEqual(ListItem.dbtype,episode) + String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/contextmenu/browse_season.py">
+                <label>40011</label>
+                <visible>String.IsEqual(ListItem.dbtype,episode) + String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/contextmenu/trakt_manager.py">
+                <label>40005</label>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow)] + String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/contextmenu/favorites_manager.py">
+                <label>40008</label>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow)] + String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/contextmenu/play_random.py">
+                <label>40010</label>
+                <visible>[String.IsEqual(ListItem.dbtype,tvshow)] + String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/contextmenu/options.py">
+                <label>40007</label>
+                <visible>String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/contextmenu/extras.py">
+                <label>40006</label>
+                <visible>String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+        </menu>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <platform>all</platform>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <description lang="en">FEN'd Up Beyond All Recognition[CR][CR]This addon simply searches websites for content. The author of this addon does not host any of the content which is found and has no affiliation with any of the content providers</description>
+        <disclaimer lang="en">The author is not responsible for the use of this addon.[CR][CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR][CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+        <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.png</fanart>
+            <screenshot>screen1.png</screenshot>
+            <screenshot>screen2.png</screenshot>
+            <screenshot>screen3.png</screenshot>
+        </assets>
+    </extension>
+</addon>
+
+</addons>
+
