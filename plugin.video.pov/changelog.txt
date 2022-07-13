@@ -5,6 +5,9 @@
   [COLOR dodgerblue][B]CREDITS[/B][/COLOR]
 - Fen, Venom, Mr-Kodi.
 
+  [COLOR dodgerblue][B]Version 2.16.0[/B][/COLOR]
+- Menu changes (context menu: "Options/Extras", Extras: "Recommended")
+
   [COLOR dodgerblue][B]Version 2.15.0[/B][/COLOR]
 - Added settings action to force Sync Trakt Activity.
 - Changed code (minor) to Trakt reauthorization and sync after authorization.
