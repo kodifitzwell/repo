@@ -1,0 +1,16 @@
+
+[COLOR dodgerblue][B]Version 1.0.01[/B][/COLOR]
+- Adjusted some meta list items so as to make them more uniform.
+- Other changes/fixes.
+
+
+[COLOR dodgerblue][B]Version 1.0.0[/B][/COLOR]
+- Initial Release
+- This is an English language only addon.
+
+
+
+
+
+
+++

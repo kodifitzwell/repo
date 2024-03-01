@@ -1,0 +1,535 @@
+
+  [COLOR dodgerblue][B]CREDITS[/B][/COLOR]
+- Fen, Venom, Mr-Kodi.
+
+  [COLOR dodgerblue][B]Version 4.03.01[/B][/COLOR]
+- Fixed search Movies Collection (TMDb).  This was broke a long time ago, guess no one uses.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 4.02.24[/B][/COLOR]
+- Fixed Autoplay Next Expisode.
+
+  [COLOR dodgerblue][B]Version 4.02.23[/B][/COLOR]
+- Added "Autoscrape Next Episode (source select)."  There will be no window, but
+  this setting uses the same activation parameters as "Auto Play / Autoplay Next Episode."
+  Leave those as default or enable the setting and customize, but be sure to then
+  disable "Auto Play / Autoplay Next Episode" as those settings will take precedence.
+
+  [COLOR dodgerblue][B]Version 4.02.21[/B][/COLOR]
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 4.02.19[/B][/COLOR]
+- Added "Clear Cloud Storage" for Offcloud.
+- Changed bitsearch scraper to request one page with limit=50 rather than two requests
+  with default page limit=~20.
+- Added bitsearch sort preference for "random/largest" available.
+  Ostensibly, one could have only bitsearch enabled and return a greater variety of
+  4k,1080,720,SD results rather than mostly 4k results.
+- bitlord, eztv, glodls, torrentdownload, likely to be removed in next version.
+- Added meta_language iso:ar-SA, name:Arabic Saudi Arabia.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 4.02.17[/B][/COLOR]
+- Added two torrentio alternatives.
+- Fixed Offcloud user cloud scraper quality count.
+- Removed Furk.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 4.02.15[/B][/COLOR]
+- Enabled "Use Torrent Services" in settings to disable debrid service but allow access to
+  cloud from "My Services" menu.
+- Fixed Offcloud "Authorize/Revoke" missing.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 4.02.14[/B][/COLOR]
+- Added Offcloud cloud scraper to search existing items in user cloud.  Offcloud api
+  does not provide file metadata, do not report zero size files.
+- Fixed Offcloud resolver for single file torrents.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 4.02.13[/B][/COLOR]
+- Added more logging for Offcloud error responses.
+- Disabled playback for certain file types from Offcloud because their api is not friendly.
+
+  [COLOR dodgerblue][B]Version 4.01.31[/B][/COLOR]
+- [COLOR chartreuse]Added Offcloud as a debrid provider.[/COLOR]
+  Offcloud seems to yield most results when torrentio also enabled.
+- Added magnetdl,rutor to the torrentio search links.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 3.12.29[/B][/COLOR]
+- Changed "title sort" for lists reported by reddit user.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 3.12.0[/B][/COLOR]
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 3.9.0[/B][/COLOR]
+- Fixed "Clear All Cache" not removing some data from cache.
+- Fixed missing "Discover Help" text.
+- Icon changes. If icons are missing, "Reset" menu from menu editor.
+- Other changes/fixes
+
+  [COLOR dodgerblue][B]Version 3.8.4[/B][/COLOR]
+- Revert threading code as fix for previous update that broke in Android.
+
+  [COLOR dodgerblue][B]Version 3.8.0[/B][/COLOR]
+- [COLOR chartreuse]Trakt lists now support mixed Movies/TVShows/Seasons/Episodes,
+  i.e. "The Essential X-Files Episodes" and "Star Wars Canon timeline."[/COLOR]
+  Even if you do not choose to "Paginate Lists When Possible," enable this setting and
+  change it to a reasonable amount for your device and then disable it. Even if disabled,
+  POV will use this nominal value to limit the number of threads used when creating lists.
+- Trending/Popular/Search lists without Trakt authentication have been supported since 2.18.0.
+  Mixed lists have only been tested with the Trending/Popular/Search lists.
+  I do not use Trakt, but I do use these lists.
+- Changed default sources to bitsearch, torrentio, and eztv.
+- Some cosmetic changes to custom windows.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 3.5.0[/B][/COLOR]
+- Fixed issue with resume in Kodi 20 Nexus.
+
+  [COLOR dodgerblue][B]Version 3.3.0[/B][/COLOR]
+- Fixed issue with adding non folder menu items to main menus and resulting busy spinners.
+  Thanks for the insight from [COLOR dodgerblue]Tikipeter[/COLOR].
+- Fixed occasional busy spinners that started with Kodi 20 Nexus and one occasional
+  empty results window from way back.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 3.2.0[/B][/COLOR]
+- [COLOR chartreuse]Added back user defined undesirables through comma separated list. See "Sources" settings.
+  Example: define "8ch,7ch,atmos,hqcam" to filter out these terms.[/COLOR]
+- Added more Kodi 20 Nexus changes.
+
+  [COLOR dodgerblue][B]Version 3.1.0[/B][/COLOR]
+- Added rudimentary fix for Kodi 20 Nexus release, incomplete but will cut down some of the
+  warning messages. Tested only with Kodi 19.5/20 in Windows 10. New requirements seem
+  over-engineered, but people are desperate for 1000s list items so it is apparently needed
+  for speed improvement. Same goes for new settings format.
+
+  [COLOR dodgerblue][B]Version 3.0.0[/B][/COLOR]
+- Added support for TMDb logos when "Include Extra Art" turned off.
+- Changed dialog sizes/colors. If alignment is off, check with default Kodi skin
+  before reporting.
+- Changed scraping dialog progress to reflect ratio of completed versus enabled
+  providers/debrids. This was previously based on time.
+- Removed the settings toggles from the "Options..." menu.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.21.0[/B][/COLOR]
+- Fixed Real Debrid authorization.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.20.0[/B][/COLOR]
+- Changed scraper dialog when fanart clearlogo is enabled fanart background is disabled.
+- Removed torrentgalaxy scraper. torrentio sources many sites including torrentgalaxy.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.19.0[/B][/COLOR]
+- Changed meta_cache memory string unique to POV.
+
+  [COLOR dodgerblue][B]Version 2.18.0[/B][/COLOR]
+- Non-Trakt users can now access (some) Trakt lists under "My Lists."
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.17.0[/B][/COLOR]
+- Moved tools from main menu to Settings menu (restore root menu to default required).
+- Renamed settings categories My Lists/My Services to match root menu.
+- Removed low priorty scrapers.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.16.0[/B][/COLOR]
+- Changed menu positions (context menu: "Options/Extras", Extras: "Recommended")
+
+  [COLOR dodgerblue][B]Version 2.15.0[/B][/COLOR]
+- Added settings action to force Sync Trakt Activity.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.14.0[/B][/COLOR]
+- Added debrid account expiration notification at startup if less than 7 days.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.13.0[/B][/COLOR]
+- [COLOR chartreuse]Migrated scrapers to POV addon, see POV settings to enable/disable
+  individual sources.[/COLOR]
+- [COLOR chartreuse]Please uninstall separate FenomScrapers addon (Orphaned).[/COLOR]
+- Context menu scraper navigation may not be complete, more testing needed.
+- Removed support for hosters, may bring back in future.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.12.0[/B][/COLOR]
+- Fixed settings option to set POV or Trakt as Watched Status Provider.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.11.0[/B][/COLOR]
+- Changed TMDb search for certain tv categories, will filter by English as the
+  original language.
+- Changed code (minor) to Trakt/Real Debrid authorization.
+- New media icons.
+
+  [COLOR dodgerblue][B]Version 2.9.0[/B][/COLOR]
+- [COLOR chartreuse]Authorize/revoke accounts directly from POV addon, removed
+  dependency for separate accounts addon.[/COLOR]
+- Trakt/Easynews/Furk functions are beta at this time.
+- Changed settings organization/defaults.
+
+  [COLOR dodgerblue][B]Version 2.8.0[/B][/COLOR]
+- Updated for new My Accounts/Fenomaccounts addon id to prevent other addons
+  clobbering ours.
+- In the case more than one MyAccounts addon installed, access though
+  Fen>Settings>My Accounts.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.7.0[/B][/COLOR]
+- Migrated script.tikiart media to Fen, removed dependency script.tikiart.
+- Migrated script.tikiart screenshots to Fen as they are Fen oriented.
+- Changed changelog.txt path.
+- Changed "Filter Results By Size", reverted setting to maximum file size (10000MB default).
+- Reverted all Fen databases to addon_data folder.
+- Changed setting causing erroneous lines in settings file.
+- Fixed hard coded Trakt/TMDb api, moved to settings file defaults.
+
+  [COLOR dodgerblue][B]Version 2.6.12/13[/B][/COLOR]
+- Fixed Trakt In Progress issues for Movies and TV Shows where no TMDb ID can be fetched.
+- Fixed Multiselect Genres.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.6.11[/B][/COLOR]
+- Added sorting options for Trakt Watchlist and Trakt Collection (Date Added or Title).
+- Added sorting options for In Progress and Watched Movies/TV Shows/Episodes (Recently Watched or Title).
+- Partial re-write of in progress/watched related code.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.6.10[/B][/COLOR]
+- "Cast" list can now be enabled/disabled along with the other lists in "Extras". Extras list preferences are unfortunately reset for this update. So head to Settings->General->Extras->Enable Content for Extras Lists to re-set these.
+- Some improvements to "Extras" & "People" XML window grouplists should provide more consistent navigation.
+- Both "Watched" and "In Progress" Menus for Movies and TV Shows are now sorted by most recently watched.
+- Trakt Watchlist Menus are now sorted by most recently added.
+- Added "Navigation" tab to settings which will house all settings to do with Movie/TV Show/Episode lists. These settings are moved from General tab.
+- Added "Enable Kodi Menu Caching" to Settings->General. Leave this on unless you are having issues with certain skins (normally JurialMunkey skins).
+- Moved to "traktcache2.db" in preparation for certain Trakt changes. "traktcache.db" can be deleted if you want. Doesn't matter either way.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.6.09[/B][/COLOR]
+- Re-added "Up Coming" to Movie and TV Show menus. Restore these menus to default to view the new item in each.
+- Changed behavior of trakt sync when first authorizing Trakt account.
+- Fixed issue of using old trakt token straight after required refresh of token performed.
+- Added check of device sleep state to pause Trakt Sync during sleep. Refactored check for screensaver state which also pauses Trakt Sync when active.
+- Refactored code to remove nested functions in metadata module.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.6.08[/B][/COLOR]
+- Added "Recommended..." to Movie & TV Show Context Menu. Will load a list of recommended titles for the currently highlighted Movie/TV Show. Same thing was already possible through "Because You Watched" menus and also within the "Extras" window. Oh, it was already available from within the "Discover" menus too.
+- Fixed RD Cloud browsing behavior when no items present.
+- Switched to using sessions for requests.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.6.07[/B][/COLOR]
+- Changed sort order of "In Progress TV Shows" to most recently watched.
+
+  [COLOR dodgerblue][B]Version 2.6.06[/B][/COLOR]
+- A couple of quick fixes.
+
+  [COLOR dodgerblue][B]Version 2.6.05[/B][/COLOR]
+- Added "Scrape With All Filters Ignored" to Options menu to perform a scrape while disabling all Fen and Fenomscraper filters.
+- A couple more quick fixes.
+
+  [COLOR dodgerblue][B]Version 2.6.04[/B][/COLOR]
+- Needed to change a user_data folder name for "caches" because OpenWizard arbitrarily scans users' Kodi filesystem and deletes folders named a certain way. Unbelievable.
+
+  [COLOR dodgerblue][B]Version 2.6.03/04[/B][/COLOR]
+- Added "Most Watched This Week" by request to Movies and TV Shows menus. Restore these menus to default to view the new item in each.
+- A couple more quick fixes.
+
+  [COLOR dodgerblue][B]Version 2.6.02[/B][/COLOR]
+- A couple of quick fixes.
+
+  [COLOR dodgerblue][B]Version 2.6.01[/B][/COLOR]
+- Partial re-write of navigator code. Unfortunately all Fen default menus will return to default and all Shortcut Folders will be lost.
+- Partial re-write of metadata and meta caching code. Unfortunately all metadata will be wiped with this update and will need to be re-cached.
+- Partial re-write of debrid torrent cache check code.
+- Partial re-write of download code.
+- Partial re-write of sources code.
+- Partial re-write of search and search history code.
+- Partial re-write of other areas of code.
+- Added Kodi Log Uploader to Tools->Changelog & Log Utils. See Fen Tips for more info. Thanks to 123Venom whose code I stole. :)
+- Added variable caching times for Movie and TV Show metadata.
+- Added "Continual Random Play" for TV Show episodes. See Fen Tips for more info.
+- Lowered durations of variable caching for scraper results.
+- Removed "Enable Highlight Colors for Extras Lists" setting. No longer a feature. PIL module dependency removed as a result.
+- Moved all Fen userdata databases to a "caches" folder.
+- "Anticipated", "Upcoming", "Top Rated", "Mosts", "Search" removed from Movie and TV Show menus.
+- Changes to utilize new FenomScrapers code.
+- Many other changes to under the hood, so if there are problems after this update, please open an Issue on github. The new log uploader should make it easier to provide a log.
+
+  [COLOR dodgerblue][B]Version 2.5.21[/B][/COLOR]
+- Some changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.5.20[/B][/COLOR]
+- Removed auto showing of Changelog when addon updates. You'll have to go into Tools to check the changelog now after updates.
+- "Folder" scrapers now require you to name them to be included in a scrape when enabled.
+- Unfortunately a third partial re-write of sources code.
+- Added brief pause to Fen widget making to try and get around a reuselanguageinvoker Kodi bug where the widgets disappear when refreshed, usually after playback ends. Might work, might not. EDIT: Didn't work. Removed next update.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.5.19[/B][/COLOR]
+- Unfortunately, another partial re-write of sources code due to an error I discovered after the previous update.
+- This might be it for a while with Fen updates people. Any quickly reported issues I'll try and fix, but I need to have a serious think about why I'm actually doing this at the moment. It was a good fun ride if this is the end (I'm not stating as fact that this is the end).
+
+  [COLOR dodgerblue][B]Version 2.5.18[/B][/COLOR]
+- Changes to scraper code.
+- Changes to Trakt progress code.
+- Changes to Easynews code.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.5.17[/B][/COLOR]
+- Some changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.5.16[/B][/COLOR]
+- Added "Rows" Source Results display.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.5.15[/B][/COLOR]
+- Couple of quick changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.5.14[/B][/COLOR]
+- Fixed pack file downloading.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.5.13[/B][/COLOR]
+- Added Trakt progress support.
+- Added setting General->General->"Use Episode Thumbs For Background When Available". Be sure to have either "High" or "Original" set in Metadata->TMDb Image Resolution, otherwise episode thumbs will be of too low a quality to look decent as a background.
+- Removed movie title checking when resolving a cached torrent through Real Debrid. Any issues with real debrid resolving a wrong file please report to the github.
+- Reverted high Premiumize timeout as they have fixed their error.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.5.12[/B][/COLOR]
+- Fixed button highlight for On Deck window.
+- Fixed Trakt Calendar sorting.
+- Increased timeout for Premiumize API calls to 45 seconds (this is temporary to help with PM's current issues).
+- Couple more changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.5.10[/B][/COLOR]
+- Couple of changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.5.09[/B][/COLOR]
+- Changes to utilize new FenomScrapers code.
+- Added ability to choose custom season/episode numbers when using "Scrape with Custom Values" (Autoplay OFF only).
+- Added english translation metadata for searches where default language isn't english and searched media isn't english.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.5.08[/B][/COLOR]
+- Added "Filter Results" to source results context menu. Here you can choose to filter the results shown by Quality, Provider or Keyword/s. More options may come later. Read up about this in Tools-->Tips for Fen Use.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.5.07[/B][/COLOR]
+- Add Python 3 dependency to stop installation on Kodi 18 installs.
+
+  [COLOR dodgerblue][B]Version 2.5.06[/B][/COLOR]
+- A couple of fixes and improvements.
+
+  [COLOR dodgerblue][B]Version 2.5.05[/B][/COLOR]
+- Changes for new FenomScrapers code. If scraping stops working be sure you have the latest FenomScrapers installed.
+- Changes to caching times for External Scraper results.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.5.03-04[/B][/COLOR]
+- Few more quick fixes.
+
+  [COLOR dodgerblue][B]Version 2.5.02[/B][/COLOR]
+- Couple of quick fixes.
+
+  [COLOR dodgerblue][B]Version 2.5.01[/B][/COLOR]
+SOME PLUGIN ENDPOINTS CHANGED WITH LATEST UPDATE. ANY WIDGET ITEMS THAT ARE NOT WORKING WILL NEED TO BE RE-SET.
+NEW ARTWORK FOR FEN'S ICON AND FANART. GO TO TOOLS->REFRESH FEN ARTWORK TO FORCE A KODI REFRESH OF THE ARTWORK.
+ALSO, SEARCH HISTORY WILL BE LOST THIS UPDATE.
+- Many changes to Trakt data and general watched data handling. Please report any issues on github.
+- New settings for trakt cache/sync handling found in Settings->Trakt->Trakt Cache.
+- Many changes to code for single episode lists (Next Episodes etc). Please report any issues on github.
+- Many structural changes to the overall code that may cause issues I have missed. Please report any issues on github.
+- Added "Scrape with Custom Values" to "Options..." context menu. This allows users to select a custom title and/or year for the selected media before scraping.
+- Added "Filter Results by Name" to all Internal Provider settings. Helps to filter out unrelated results from the provider.
+- Fixed (hopefully) downloading TV Shows to network drives.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.44[/B][/COLOR]
+- Quick fix for "Trivia" error in Extras info window.
+
+  [COLOR dodgerblue][B]Version 2.0.43[/B][/COLOR]
+- Merged Fen Context Menu into main Fen addon. Uninstall the Fen Context Menu addon or you will have double context menu entries on your Fen widgets.
+- Added "Filter Results by Name" to Furk Provider settings. Helps to filter out unrelated results from the furk scraper.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.42[/B][/COLOR]
+- Merged Tikiskins into main Fen addon. You can remove the tikiskins module if you like, it is no longer used (Orphaned).
+- Removed "Info Pop-up" feature. Not used.
+- Removed "free" FenomScraper sources support in Fen (GDrive, FilePursuit, Ororo, Library). Please use another addon if you rely on these scrapers.
+- Added IMDb Keywords Search for Movies and TV Shows. Found in Search menu.
+- Partial re-write of external scrapers code.
+- Attempts at a few speed increases across the add-on.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.41[/B][/COLOR]
+- Some improvements and silly bug fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.40[/B][/COLOR]
+- Partial re-write of "Extras" and "People" window xmls and python code.
+- Added setting to enable/disable lists in the Extras window. Settings->General->Extras/Popup->"Enable Content for Extras Lists". The "Plot" and "Cast" items stay by default, but all other list items can be included/excluded from the window. Good idea to exclude the items you don't want displayed, as all enabled info is being called upon winodw open.
+- Added caching for Extras window highlight colors.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.38[/B][/COLOR]
+- A couple of changes.
+
+  [COLOR dodgerblue][B]Version 2.0.37[/B][/COLOR]
+- A couple of fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.35/36[/B][/COLOR]
+- A few quick fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.34[/B][/COLOR]
+- Separated HDR and Dolby Vision Filters.
+
+  [COLOR dodgerblue][B]Version 2.0.33[/B][/COLOR]
+- Added "Enable Highlight Colors" setting to General->Extras/Popup. When enabled, a highlight color will be assigned based on the image color properties of the poster. Default is ON.
+- Added "HDR & Dolby Vision Files Filter" to Settings->Results->Sorting & Filtering. Set to Include/Exclude/Prefer(Autoplay).
+- Fixed Trakt new list creation in Fen.
+- Various other fixes and changes.
+
+  [COLOR dodgerblue][B]Version 2.0.32[/B][/COLOR]
+- Some window changes.
+- Some code improvements.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.30[/B][/COLOR]
+- Fixed progress bar on custom xmls for misbehaving skins.
+- Fixed progress bar time for next episode dialog.
+- Fixed scrape progress not closing after no selection in prescrape mode.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.29[/B][/COLOR]
+- Hopeful fix for playback monitoring.
+- Fixed rescrape and select source.
+- Added "Exclude Non Acting Roles in Person Results" for Extras. This will attempt to filter out Movies/TV Shows where the person is themself, rather than playing a role e.g. talk show appearances, documentaries. Default is ON.
+- Couple more quick fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.28[/B][/COLOR]
+- Couple of quick fixes.
+- Couple of other changes.
+
+  [COLOR dodgerblue][B]Version 2.0.27[/B][/COLOR]
+- Couple of quick fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.26[/B][/COLOR]
+- New custom scrape progress window.
+- Added setting "Use as Default Provider (Slow)" for Settings->Metadata->Include Extra Art. This will make Fen get all art from Fanart.tv instead of TMDb when possible. If you wish to use this, you will need to clear your metadata first. However, you will only need to clear it this first time. Subsequent enabling/disabling of this setting will NOT need a clearing of the metadata database.
+- Extended autoplay next episode seconds from end setting to up to 120 seconds.
+- Some structural changes within the addon. So if you notice weird happenings, report them on the github.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.24/25[/B][/COLOR]
+- Couple more quick fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.23[/B][/COLOR]
+- Quick fix for silly error in last update.
+
+  [COLOR dodgerblue][B]Version 2.0.22[/B][/COLOR]
+- Added "Show Results at Top" settings for the 3 debrid cloud scrapers. This will sort any debrid cloud results to the top of the results list, independent of quality/size sorting choices.
+- Re-added "Include Unaired Episodes" to Settings->General. Choose to show/hide unaired episodes here.
+- Re-added "Show Release Year in Listings" to Settings->General. Set to Movie/TV Show/Both/Off.
+- Re-added "Check Year Before Search" to Settings->External Scrapers.
+- Re-added "Stop Search Early if Most Sources Finished" to Settings->External Scrapers.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.21[/B][/COLOR]
+- Re-added "Autostart FEN When Kodi Starts" to settings->General.
+- Remade Autoplay Next Episode.
+- Added context menu item for results "Add to Cloud". Use this to manually add the chosen torrent result to the Cloud of your debrid provider.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.20[/B][/COLOR]
+- MANY settings/features removed for this update. Roll back to previous version and turn off auto updates if this is an issue. Or of course use a different addon.
+- Changed "Filter Results By Size". Now you set your internet line speed rather than a min/max setting. Fen will determine on a per scrape basis the maximum filesize to include based on your internet speed and the reported duration of the movie/tvshow. There is now no way to set a minimum size.
+e.g. If you input 20 Mbit/s as your internet speed, Fen will use the max speeds for different length videos as follows:
+Length 10min = ~1.35 Gig, Length 30mins = ~4 Gig, Length 60 mins = ~8 Gig, Length 90min = ~12.5 Gig, Length 120min = ~16.2 Gig etc...
+Fen will calculate these sizes using 90% of your overall internet speed (the amount you enter in settings).
+- Added setting to have Fen scrape using ALL Fenomscraper scrapers instead of just the ones currently set to be used. If you get no results on a scraper search, you can select this to run a scrape with all the scrapers Fenomscrapers has. You can choose to do this from the "Options..." context menu.
+- Added setting to enable/disable the Autoplay Next Episode window, if set to OFF you only receive a brief notification when the next episode is ready to be played. Found in Settings->Playback->Episodes->"Show Next Episode Window". Default is ON.
+- Fixed Next Episode error in certain circumstances.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.18[/B][/COLOR]
+- Trailer playback from Widgets with auto-open Extras enabled will now play in Kodi's default player window, meaning it won't crash Kodi anymore. Unfortunately, it also means Fen's skinned videoplayer window will not be used. I am still searching for a better solution to this problem.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.16/17[/B][/COLOR]
+- Added video player window to view trailers etc from Extras window without having to exit Extras window.
+- Adjust Next Episode window to accommodate different skin font sizes.
+- Suppress "Extras" context menu item when Extras chosen as default action fo Movies/TV Shows.
+- Began work on integrating Trakt resume points (no promises).
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.15[/B][/COLOR]
+- Added Database Maintenance Service. Will run once a week. Shouldn't be more than 20 seconds on a slow device, (much) quicker on speedier devices, or if database size is already quite small. Can also be run from Tools->Clear Databases & Clean Settings Files->Clean Databases.
+- A couple of fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.14[/B][/COLOR]
+- Quick fix for Set Views. Re-do any views that didn't save from last update.
+- Removed icons "Theme" setting.
+- Changes to Folder Scrapers code. Hopefully speeds things up. Tools->"Clear Internal Scrapers Cache" if there are problems with this after update.
+- A couple of other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.13[/B][/COLOR]
+- Added setting to enable/disable scrollbars in Fen Extras.
+- Changed settings to do with Fen Extras and Info Popup. Still located in General, but have their own section.
+- Setting ID for automatically opening Fen Extras for Movies/TV Shows has changed. As a consequence, you will now need to re-set this setting.
+- Fixed small bug which prevented downloads in latest update.
+- Other small changes/fixes.
+- Github Repository Issues tab closed until further notice.
+
+
+  [COLOR dodgerblue][B]Version 2.0.12[/B][/COLOR]
+- Added custom xml dialogs for auto next episode playback and still watching check.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.11[/B][/COLOR]
+- Added setting to hide unaired episodes. Found in General->Appearance.
+- Add ENG backup call for trailers supplied by TMDb that often don't populate when using language other than ENG.
+- Added scrollbars for lists in Extras and People windows. Not sure if I'm keeping them yet...
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.10[/B][/COLOR]
+- A few changes to Extras and People windows.
+- A couple of fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.09[/B][/COLOR]
+- Added "Movies Directed" to People info.
+- Other quick changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.08[/B][/COLOR]
+- Quick release to fix a couple of issues.
+
+  [COLOR dodgerblue][B]Version 2.0.07[/B][/COLOR]
+- Fixed episodes not always getting marked as watched when using autoplay next episode.
+- Added start up service to check for malformed Fen databases.
+- Changes to "People" directories behavior. Now runs on a custom xml.
+- Other changes/fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.05[/B][/COLOR]
+- Added "Action for Movies/TV Shows" to Settings->General->Navigation. Set this to "Default" or "Open Fen Extras". Default will behave as normal, Open Fen Extras will open Fen's Extras window when a Movie or TV Show is selected. From there you can begin playback/browse into seasons/episodes.
+- Added "Play Random" to play a random episode of a TV Show. Found in context menu of TV Show, or in Fen "Extras..." window. Will play one random episode from the selected TV Show. Also available from widgets when using Fen Contextmenu addon.
+- A couple more fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.04[/B][/COLOR]
+- A couple more fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.02/03[/B][/COLOR]
+- A few fixes.
+
+  [COLOR dodgerblue][B]Version 2.0.01[/B][/COLOR]
+- Replaced "Notifications" with "Info Popup". Get an info window pop up when browsing to give some info about the media. Works for Movies and TV Shows. Enable & Delay can be set in Settings->General.
+- New "Extras" custom dialog window.
+- New custom dialogs for Select, Multiselect, Yes/No and OK dialogs.
+- Improvements to resolving/autoresolving.
+- Many other changes/fixes/improvements.
+

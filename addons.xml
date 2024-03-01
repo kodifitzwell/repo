@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+
+<addon id="plugin.video.affenity" name="afFENity" provider-name="kodifitzwell" version="1.0.02b">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.19.1"/>
+    </requires>
+    <extension library="resources/lib/affenity.py" point="xbmc.python.pluginsource">
+        <provides>video</provides>
+    </extension>
+    <extension library="resources/lib/service.py" point="xbmc.service"/>
+    <extension library="resources/lib/" point="xbmc.python.module"/>
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <summary lang="en">Access your content from Easynews and Debrid Clouds.</summary>
+        <description lang="en">This add-on is intended for advanced Kodi users only. You must own the content of any media you play through this addon. This is an English language only add-on.</description>
+        <platform>all</platform>
+        <disclaimer lang="en">The author of this addon does not host any of the content which is found and has no affiliation with any of the content providers.</disclaimer>
+        <license/>
+        <assets>
+            <icon>resources/media/affenity_icon.png</icon>
+            <fanart>resources/media/affenity_fanart.jpg</fanart>
+        </assets>
+        <news>INFO: For latest changes see Changelog within Tools of add-on.</news>
+    </extension>
+</addon>
+
+<addon id="plugin.video.dradis" version="4.03.01" name="Dradis" provider-name="kodifitzwell">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.requests" />
+		<import addon="script.module.beautifulsoup4" />
+		<import addon="plugin.video.youtube" optional="true" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="dradis.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.python.module" library="resources/lib/" />
+	<extension point="xbmc.addon.metadata">
+		<reuselanguageinvoker>true</reuselanguageinvoker>
+		<summary lang="en">[COLOR red]Dradis[/COLOR] - We do not host any of the contents streamed</summary>
+		<description lang="en">[B][COLOR red]Dradis[/COLOR][/B][CR]This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR]The author does not host any of the content in this addon and takes no responsibility for content found</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<forum />
+		<disclaimer lang="en">The author of this addon does not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<news>
+[B][COLOR red]Update - March 2024[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Added two torrentio alternatives.[/I]
+[COLOR yellow]--[/COLOR][I] Changed bitsearch scraper to request one page with limit=50 rather than two requests with default page limit=~20.[/I]
+[COLOR yellow]--[/COLOR][I] Added bitsearch sort preference for "random/largest" available.[/I]
+   Ostensibly, one could have only bitsearch enabled and return a greater variety of
+   4k,1080,720,SD results rather than mostly 4k results.
+[COLOR yellow]--[/COLOR][I] bitlord, eztv, glodls, torrentdownload, likely to be removed in next version.[/I]
+		</news>
+	</extension>
+</addon>
+
+<addon id="plugin.video.pov" version="4.03.01" name="POV" provider-name="kodifitzwell">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="resources/lib/pov.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="resources/lib/service.py" />
+    <extension point="xbmc.python.module" library="resources/lib/" />
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="resources/lib/contextmenu.py" args="refresh_widgets">
+                <label>40001</label>
+                <visible>String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_watched_params">
+                <label>40003</label>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(pov_widget),true) + String.IsEqual(ListItem.Property(pov_playcount),0)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_unwatched_params">
+                <label>40004</label>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(pov_widget),true) + String.IsEqual(ListItem.Property(pov_playcount),1)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_clearprog_params">
+                <label>40009</label>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(pov_widget),true) + String.IsEqual(ListItem.Property(pov_in_progress),true)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_browse_params">
+                <label>40002</label>
+                <visible>String.IsEqual(ListItem.dbtype,episode) + String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_browse_seas_params">
+                <label>40011</label>
+                <visible>String.IsEqual(ListItem.dbtype,episode) + String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_trakt_manager_params">
+                <label>40005</label>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow)] + String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_fav_manager_params">
+                <label>40008</label>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow)] + String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_random_params">
+                <label>40010</label>
+                <visible>[String.IsEqual(ListItem.dbtype,tvshow)] + String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_options_menu_params">
+                <label>40007</label>
+                <visible>String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_extras_menu_params">
+                <label>40006</label>
+                <visible>String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+        </menu>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <platform>all</platform>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <description lang="en">The author of this addon does not host any of the content which is found and has no affiliation with any of the content providers</description>
+        <disclaimer lang="en">This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+        <news>INFO: For latest changes see Changelog within Tools of add-on.[CR][CR]This addon searches websites for content.[CR]The author is not responsible for the use of this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</news>
+        <summary>The position from which something or someone is observed.[CR]</summary>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.png</fanart>
+        </assets>
+    </extension>
+</addon>
+
+
+<addon id="repository.kodifitzwell" version="0.0.1" name="kodifitzwell repository" provider-name="kodifitzwell">
+    <extension point="xbmc.addon.repository" name="kodifitzwell repository">
+        <dir minversion="19.0.0">
+            <info compressed="false">https://raw.githubusercontent.com/kodifitzwell/repo/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/kodifitzwell/repo/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/kodifitzwell/repo/master/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <description>kodifitzwell repository</description>
+        <disclaimer></disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+
+</addons>
