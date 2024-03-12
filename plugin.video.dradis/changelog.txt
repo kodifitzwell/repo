@@ -1,4 +1,9 @@
 
+[B][COLOR red]Update - April 2024[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Added Offcloud support.  Offcloud does not return metadata like file size from cloud items, do not report zero file sizes.[/I]
+[COLOR yellow]--[/COLOR][I] Removed Furk.[/I]
+
+
 [B][COLOR red]Update - March 2024[/COLOR][/B]
 [COLOR yellow]--[/COLOR][I] Added two torrentio alternatives.[/I]
 [COLOR yellow]--[/COLOR][I] Changed bitsearch scraper to request one page with limit=50 rather than two requests with default page limit=~20.[/I]

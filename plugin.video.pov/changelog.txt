@@ -2,6 +2,9 @@
   [COLOR dodgerblue][B]CREDITS[/B][/COLOR]
 - Fen, Venom, Mr-Kodi.
 
+  [COLOR dodgerblue][B]Version 4.04.01[/B][/COLOR]
+- Other changes/fixes.
+
   [COLOR dodgerblue][B]Version 4.03.01[/B][/COLOR]
 - Fixed search Movies Collection (TMDb).  This was broke a long time ago, guess no one uses.
 - Other changes/fixes.

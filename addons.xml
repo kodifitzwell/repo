@@ -26,7 +26,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.dradis" version="4.03.01" name="Dradis" provider-name="kodifitzwell">
+<addon id="plugin.video.dradis" version="4.04.01~rc1" name="Dradis" provider-name="kodifitzwell">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="script.module.requests" />
@@ -51,18 +51,14 @@
 			<fanart>fanart.jpg</fanart>
 		</assets>
 		<news>
-[B][COLOR red]Update - March 2024[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Added two torrentio alternatives.[/I]
-[COLOR yellow]--[/COLOR][I] Changed bitsearch scraper to request one page with limit=50 rather than two requests with default page limit=~20.[/I]
-[COLOR yellow]--[/COLOR][I] Added bitsearch sort preference for "random/largest" available.[/I]
-   Ostensibly, one could have only bitsearch enabled and return a greater variety of
-   4k,1080,720,SD results rather than mostly 4k results.
-[COLOR yellow]--[/COLOR][I] bitlord, eztv, glodls, torrentdownload, likely to be removed in next version.[/I]
+[B][COLOR red]Update - April 2024[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Added Offcloud support.  Offcloud does not return metadata like file size from cloud items, do not report zero file sizes.[/I]
+[COLOR yellow]--[/COLOR][I] Removed Furk.[/I]
 		</news>
 	</extension>
 </addon>
 
-<addon id="plugin.video.pov" version="4.03.01" name="POV" provider-name="kodifitzwell">
+<addon id="plugin.video.pov" version="4.04.01~rc1" name="POV" provider-name="kodifitzwell">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />
