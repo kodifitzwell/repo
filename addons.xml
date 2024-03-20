@@ -26,7 +26,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.dradis" version="4.04.01~rc3" name="Dradis" provider-name="kodifitzwell">
+<addon id="plugin.video.dradis" version="4.04.01~rc5" name="Dradis" provider-name="kodifitzwell">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="script.module.requests" />
@@ -52,15 +52,16 @@
 		</assets>
 		<news>
 [B][COLOR red]Update - April 2024[/COLOR][/B]
-[COLOR yellow]--[/COLOR][I] Added workaround for Opensubtitles.
-[COLOR yellow]--[/COLOR][I] Added Trakt "Trending Recent" and "Genres" for "Discover" categories.  May need to open Settings > Navigation and select "OK" to activate.
+[COLOR yellow]--[/COLOR][I] Added debrid check status to Scraper Progress Dialog.[/I]
+[COLOR yellow]--[/COLOR][I] Added workaround for Opensubtitles.[/I]
+[COLOR yellow]--[/COLOR][I] Added Trakt "Trending Recent" and "Genres" for "Discover" categories.  May need to open Settings > Navigation and select "OK" to activate.[/I]
 [COLOR yellow]--[/COLOR][I] Added Offcloud support.  Offcloud does not return metadata like file size from cloud items, do not report zero file sizes.[/I]
 [COLOR yellow]--[/COLOR][I] Removed Furk.[/I]
 		</news>
 	</extension>
 </addon>
 
-<addon id="plugin.video.pov" version="4.04.01~rc3" name="POV" provider-name="kodifitzwell">
+<addon id="plugin.video.pov" version="4.04.01~rc5" name="POV" provider-name="kodifitzwell">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />
