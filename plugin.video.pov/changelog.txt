@@ -3,6 +3,14 @@
 - Fen, Venom, Mr-Kodi.
 
   [COLOR dodgerblue][B]Version 4.04.01[/B][/COLOR]
+- [COLOR chartreuse]NOTICE: Trakt re-authorization required with this release.[/COLOR]
+  Trakt will not work without due to separating api keys for each addon in repo.
+- Added "Trending Recent" to Movies/TV Shows.  These lists include titles from this/last year.
+  From Edit context menu, "Restore" menu or "Check" menu for new items.
+- "InfoList" returned as results display.
+- Added "Release Date" to Collection/Watchlist sort options.
+- Fixed Discover export options.
+- Fixed "Browse" options in widget context menu.
 - Other changes/fixes.
 
   [COLOR dodgerblue][B]Version 4.03.01[/B][/COLOR]
