@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+
+<addon id="plugin.video.dradis" version="4.07.01" name="Dradis" provider-name="kodifitzwell">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.requests" />
+		<import addon="plugin.video.youtube" optional="true" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="dradis.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" />
+	<extension point="xbmc.addon.metadata">
+		<reuselanguageinvoker>true</reuselanguageinvoker>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<disclaimer lang="en">The author of this addon does not host any of the content which is found and has no affiliation with any of the content providers.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</disclaimer>
+		<summary>[COLOR red]Dradis[/COLOR] is a tracking technology used in the re-imagined Battlestar Galactica miniseries and television show, as well as related spinoff media.[CR]</summary>
+		<description lang="en">This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</description>
+		<news>INFO: For latest changes see Changelog within add-on.</news>
+		<assets><icon>icon.png</icon><fanart>fanart.jpg</fanart></assets>
+	</extension>
+</addon>
+
+<addon id="plugin.video.pov" version="4.07.02" name="POV" provider-name="kodifitzwell">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.requests" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="resources/lib/pov.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="resources/lib/service.py" />
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <disclaimer lang="en">The author of this addon does not host any of the content which is found and has no affiliation with any of the content providers.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</disclaimer>
+        <summary>What you like to watch.[CR]</summary>
+        <description lang="en">This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</description>
+        <news>INFO: For latest changes see Changelog within add-on.</news>
+        <assets><icon>icon.png</icon><fanart>fanart.png</fanart></assets>
+    </extension>
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="resources/lib/contextmenu.py" args="refresh_widgets">
+                <label>40001</label>
+                <visible>String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_watched_params">
+                <label>40003</label>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(pov_widget),true) + String.IsEqual(ListItem.Property(pov_playcount),0)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_unwatched_params">
+                <label>40004</label>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(pov_widget),true) + String.IsEqual(ListItem.Property(pov_playcount),1)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_clearprog_params">
+                <label>40009</label>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(pov_widget),true) + String.IsEqual(ListItem.Property(pov_in_progress),true)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_browse_params">
+                <label>40002</label>
+                <visible>String.IsEqual(ListItem.dbtype,episode) + String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_browse_seas_params">
+                <label>40011</label>
+                <visible>String.IsEqual(ListItem.dbtype,episode) + String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_trakt_manager_params">
+                <label>40005</label>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow)] + String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_fav_manager_params">
+                <label>40008</label>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,tvshow)] + String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_random_params">
+                <label>40010</label>
+                <visible>[String.IsEqual(ListItem.dbtype,tvshow)] + String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_options_menu_params">
+                <label>40007</label>
+                <visible>String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+            <item library="resources/lib/contextmenu.py" args="pov_extras_menu_params">
+                <label>40006</label>
+                <visible>String.IsEqual(ListItem.Property(pov_widget),true)</visible>
+            </item>
+        </menu>
+    </extension>
+</addon>
+
+
+<addon id="plugin.video.infinity" name="Infinity" provider-name="kodifitzwell" version="4.07.01">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.requests"/>
+		<import addon="plugin.video.youtube" optional="true"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="kodi.context.item">
+		<menu id="kodi.core.main">
+			<item library="resources\lib\context\addtoLibrary.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Add to Library</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.addtoLibrary)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\addtoFavourite.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Add/Remove Favourite</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.addtoFavourite)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\playTrailer.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Play Trailer</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.playTrailer)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\playTrailerSelect.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Play Trailer (Select)</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.playTrailerSelect)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\traktManager.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Trakt Manager</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.traktManager)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\clearProviders.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Clear Providers</label>
+				<visible>
+					[!String.IsEmpty(Window(home).Property(context.infinity.clearProviders)) +
+					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]] |
+					[String.Contains(Container.FolderPath,videodb://) +
+					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]]
+				</visible>
+			</item>
+			<item library="resources\lib\context\clearBookmark.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Clear Item Bookmark</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.clearBookmark)) +
+					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					ListItem.IsResumable +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\rescrape.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Rescrape Item</label>
+				<visible>
+					[!String.IsEmpty(Window(home).Property(context.infinity.rescrape)) +
+					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]]
+				</visible>
+			</item>
+			<item library="resources\lib\context\addLibtoFavourite.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Add/Remove Favourite</label>
+				<visible>
+					[String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.ListItem.FolderPath,videodb://)] +
+					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\libRescrape.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Rescrape Lib Item</label>
+				<visible>
+					[String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.ListItem.FolderPath,videodb://)] +
+					[String.Contains(Container.ListItem.Path,Window(home).Property(infinity.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(infinity.tvLib.path))] +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\playFromHere.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Play from here</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.playFromHere)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					String.IsEqual(ListItem.dbtype,episode)
+				</visible>
+			</item>
+			<item library="resources\lib\context\autoPlay.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Auto Play</label>
+				<visible>
+					String.IsEmpty(Window(home).Property(infinity.autoPlay.enabled)) +
+					!String.IsEmpty(Window(home).Property(context.infinity.autoPlay)) +
+					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\sourceSelect.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Source Select</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(infinity.autoPlay.enabled)) +
+					!String.IsEmpty(Window(home).Property(context.infinity.sourceSelect)) +
+					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.infinity/?action=play) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\findSimilar.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Find Similar</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.findSimilar)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\browseSeries.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Browse Series</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.browseSeries)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\browseEpisodes.py">
+				<label>$INFO[Window(home).Property(context.infinity.showInfinity)]Browse Episodes</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.infinity.browseEpisodes)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.infinity/) +
+					String.IsEqual(ListItem.Property(isInfinity_widget),true) +
+					String.IsEqual(ListItem.dbtype,episode)
+				</visible>
+			</item>
+		</menu>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup"/>
+	<extension point="xbmc.python.module" library="resources/lib/"/>
+	<extension point="xbmc.addon.metadata">
+		<reuselanguageinvoker>true</reuselanguageinvoker>
+		<summary lang="en">[COLOR FFE68B00]Infinity[/COLOR][CR]</summary>
+		<description lang="en">[B]Infinity[/B][CR]We do not host any of the contents streamed. This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR]The author does not host any of the content in this addon and takes no responsibility for content found.</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<forum/>
+		<website />
+		<source />
+		<disclaimer lang="en">The author of this addon does not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+		<assets>
+			<icon>resources/media/icon.png</icon>
+			<fanart>resources/media/fanart.png</fanart>
+		</assets>
+		<news />
+	</extension>
+
+</addon>
+
+</addons>
